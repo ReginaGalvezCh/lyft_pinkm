@@ -8,7 +8,7 @@ var cargaLugar = function() {
 		edge: 'left',
 		closeOnClick: true
 	}
-								 );
+	);
 	if (navigator.geolocation) {
 		navigator.geolocation.getCurrentPosition(funcionExito, funcionError);
 	}
@@ -74,6 +74,20 @@ var buscar= function(e){
 					lat: latlng.lat(),
 					lng: latlng.lng()
 				});
+				map.getRoutes({
+					origin: [lat,lon],
+					destination: [latlng.lat(), latlng.lng()],
+					travelMode: 'driving',
+					callback: function (e) {
+						var time = 0;
+						var distance = 0;
+						for (var i=0; i<e[0].legs.length; i++) {
+							time += e[0].legs[i].duration.value;
+							distance += e[0].legs[i].distance.value;
+						}
+						alert(time + " " + distance);
+					}
+				});
 				map.drawRoute({
 					origin: [lat,lon],
 					destination: [latlng.lat(), latlng.lng()],
@@ -82,6 +96,7 @@ var buscar= function(e){
 					strokeOpacity: 0.6,
 					strokeWeight: 6
 				});
+				var x = 10;
 			}
 		}
 	});

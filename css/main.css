@@ -1,5 +1,7 @@
 body{
 	font-family: 'Roboto Slab', serif;
+	position: relative;
+	min-height: 100%
 }
 
 /*MAPS*/
@@ -9,9 +11,67 @@ body{
 }
 
 #direction{
+	position: absolute;
+	top: 60px;
+	border-radius: 5px;
+	background-color: #C8C6C6;
+	color: #fff;
+	text-align: center;
+	padding: 10px;
+	width: 30%;
+	margin: 0 5%;
+}
+
+.direction{
+	position: absolute;
+	top: 110px;
+	padding: 0;
+	width: 30%;
+	margin: 0 5%;
+}
+
+#search{
+	color:#F400BA;
+	position: absolute;
+	top: 160px;
+	width: 30%;
+	margin: 0 5%;
+	font-weight: bold;
+	
+}
+
+#hidden {
+	display: none;
+	position: absolute;
+	width: 30%;
+	top: 240px;
+	margin: 0 5%;
+	background-color: #fff;
+	padding-top: 15px;
+	border-radius: 5px;
+}
+
+.valign-wrapper {
+	background-color: #fff;
+	width: 30%;
+	border-radius: 5px;
+}
+
+.btn, .btn:hover, .btn:focus {
+	background-color: #fff;
+}
+
+
+input {
+	font-family: 'Roboto Slab', serif;
+	font-size: 14px;
+}
+
+@media (max-width: 480px) {
+    #direction{
 	height: auto;
 	position: absolute;
-	bottom: 35px;
+	top: 60px;
 	border-radius: 5px;
 	word-wrap: break-word;
 	white-space: pre-line;
@@ -20,17 +80,41 @@ body{
 	color: #fff;
 	text-align: center;
 	padding: 10px;
-	width: 70%;
-	margin: 0 15%;
+	width: 90%;
+	margin: 0 5%;
 }
 .direction{
 	position: absolute;
-	bottom: 100px;
+	top: 130px;
 	padding: 0;
-	width: 70%;
-	margin: 0 15%;
+	width: 90%;
+	margin: 0 5%;
 }
 
 #search{
 	color:#F400BA;
+	position: absolute;
+	top: 170px;
+	width: 90%;
+	margin: 0 5%;
+}
+
+
+#hidden {
+	display: none;
+	position: absolute;
+	width: 90%;
+	top: 240px;
+	margin: 0 5%;
+	background-color: #fff;
+	padding-top: 15px;
+	border-radius: 5px;
+}
+
+.valign-wrapper {
+	background-color: #fff;
+	width: 90%;
+	border-radius: 5px;
+}
+
 }

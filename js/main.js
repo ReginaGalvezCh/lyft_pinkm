@@ -1,3 +1,8 @@
+
+$('#search').on('click', function(){
+		$('#hidden').slideDown(800);
+});
+
 $.ajax({
 	url: 'https://api.lyft.com/v1/ridetypes',
 	data:{
@@ -29,3 +34,4 @@ $.ajax({
     	console.log(error);
     }
 })
+

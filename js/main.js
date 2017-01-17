@@ -12,7 +12,7 @@ $.ajax({
 		//console.log((res.ride_types[1].pricing_details.base_charge * 662 ) + " Pesos chilenos")
 		console.log(res.ride_types);
 		//var ride_types = res.ride_types;
-		$.each(res.ride_types, function(i,e){
+		res.ride_types.forEach(function(e,i){
 			
 			car = e.display_name;
 			pricing = e.pricing_details.base_charge;
@@ -21,7 +21,7 @@ $.ajax({
 			per_minute = e.pricing_details.cost_per_minute;
 			service = e.pricing_details.trust_and_service;
 
-			console.log(service);
+			console.log(pricing);
 		})
 
 	},

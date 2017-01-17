@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<title>Lyft</title>
+		<link rel="shortcut icon" href="img/lyft.ico">
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div id="map"></div>
+		<div class="input-group direction">
+			<textarea id="direccion-dos" class="form-control text-center"></textarea>
+			<div class="input-group-btn">
+				<button id="search" type="button" class="btn btn-default ubicacion-icono glyphicon glyphicon-map-marker">Buscar</button>
+			</div>
+		</div>
+		<div id="direction"></div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+		<script src="js/bootstrap.js"></script>
+		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrzzgDZHaonpMdwQlC9uxaEUVjOW5lMWQ" async defer></script>
+		<script src="js/gmaps.js"></script>
+		<script src="js/geolocalizacion.js"></script>
+	</body>
+</html>
